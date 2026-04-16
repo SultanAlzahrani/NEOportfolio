@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Music from "../components/Music.svelte";
+import Computer from "../components/Computer.svelte";
+---
+
+<Layout>
+	<Music client:load />
+	<Computer client:load />
+</Layout>
