@@ -16,99 +16,140 @@ import Footer from "../components/Footer.astro";
 
 import KawaiiLogo from "../assets/kawaii.svg";
 import TrafficConeAlt from "../assets/traffic-cone-alt.svg";
+import FlakeIcon from "../assets/flake.svg";
 import ProfilePicture from "../../public/pfp.webp";
 ---
 
 <html lang="en" data-theme="dark">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>trafficlunar.net</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="../../public/pfp.webp" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>SultanOnline</title>
 
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="title" content="trafficlunar.net" />
-		<meta name="description" content="welcome to trafficlunar's website!" />
-		<meta name="keywords" content="trafficlunar, programming" />
-		<meta name="robots" content="index, follow" />
-		<meta name="language" content="English" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="trafficlunar.net" />
+    <meta name="description" content="welcome to trafficlunar's website!" />
+    <meta name="keywords" content="trafficlunar, programming" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
 
-		<!-- Open Graph -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://trafficlunar.net" />
-		<meta property="og:title" content="trafficlunar.net" />
-		<meta property="og:description" content="welcome to trafficlunar's website!" />
-		<meta property="og:image" content="https://trafficlunar.net/preview.webp" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trafficlunar.net" />
+    <meta property="og:title" content="trafficlunar.net" />
+    <meta
+      property="og:description"
+      content="welcome to trafficlunar's website!"
+    />
+    <meta property="og:image" content="https://trafficlunar.net/preview.webp" />
 
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://trafficlunar.net" />
-		<meta property="twitter:title" content="trafficlunar.net" />
-		<meta property="twitter:description" content="welcome to trafficlunar's website!" />
-		<meta property="twitter:image" content="https://trafficlunar.net/preview.webp" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://trafficlunar.net" />
+    <meta property="twitter:title" content="trafficlunar.net" />
+    <meta
+      property="twitter:description"
+      content="welcome to trafficlunar's website!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://trafficlunar.net/preview.webp"
+    />
 
-		<!-- Preconnect to API -->
-		<link rel="preconnect" href="https://api.trafficlunar.net" crossorigin />
+    <!-- Preconnect to API -->
+    <link rel="preconnect" href="https://api.trafficlunar.net" crossorigin />
 
-		<script
-			type="application/ld+json"
-			set:html={JSON.stringify({
-				"@context": "https://schema.org/",
-				"@type": "Person",
-				name: "trafficlunar",
-				url: "https://trafficlunar.net",
-				image: "https://trafficlunar.net/pfp.webp",
-				sameAs: [
-					"https://github.com/trafficlunar",
-					"https://twitter.com/trafficlunr",
-					"https://bsky.app/profile/trafficlunar.net",
-					"https://anilist.co/user/trafficlunar",
-				],
-			})}
-		/>
-		<script defer src="https://analytics.trafficlunar.net/script.js" data-website-id="2d668943-f1ae-418e-a2ba-c164f354c59c"></script>
-	</head>
-	<body class="bg-base text-text flex flex-col items-center px-8">
-		<a href="/" aria-label="trafficlunar logo" transition:persist>
-			<KawaiiLogo class="w-full h-50 mt-16 pb-1.5 drop-shadow-md transition-transform duration-300 hover:rotate-2 hover:scale-105" />
-		</a>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        name: "trafficlunar",
+        url: "https://trafficlunar.net",
+        image: "https://trafficlunar.net/pfp.webp",
+        sameAs: [
+          "https://github.com/trafficlunar",
+          "https://twitter.com/trafficlunr",
+          "https://bsky.app/profile/trafficlunar.net",
+          "https://anilist.co/user/trafficlunar",
+        ],
+      })}
+    />
+    <script
+      defer
+      src="https://analytics.trafficlunar.net/script.js"
+      data-website-id="2d668943-f1ae-418e-a2ba-c164f354c59c"></script>
+  </head>
+  <body class="bg-base text-text flex flex-col items-center px-8">
+    <!-- <a href="/" aria-label="trafficlunar logo" transition:persist>
+      <KawaiiLogo
+        class="w-full h-50 mt-16 pb-1.5 drop-shadow-md transition-transform duration-300 hover:rotate-2 hover:scale-105"
+      />
+    </a> -->
 
-		<ThemeButton client:only />
+    <div class="logo-container">
+      <span class="logo-text-1">Sultan</span>
+      <div class="online-container">
+        <FlakeIcon aria-hidden class="size-6 bottom-full left-16 text-peach" />
+        <span class="logo-text-2">
+          <span class="text-red">O</span><span class="text-peach">n</span><span
+            class="text-yellow">l</span
+          ><span class="text-green">i</span><span class="text-blue">n</span
+          ><span class="text-mauve">e</span>
+        </span>
+        <FlakeIcon aria-hidden class="size-6 bottom-full left-16 text-peach" />
+      </div>
+    </div>
+  </body>
+  <ThemeButton client:only />
 
-		<div class="max-w-4xl w-full grid grid-cols-5 gap-4 py-8 max-[60rem]:grid-cols-1">
-			<div class="flex flex-col max-[32rem]:flex-row lg:flex-col items-center gap-6 sm:gap-8 lg:gap-8 justify-center md:justify-start" transition:persist>
-				<a href="/">
-					<Image
-						src={ProfilePicture}
-						fetchpriority="high"
-						width="160"
-						height="160"
-						alt="profile picture"
-						decoding="async"
-						class="rounded-full drop-shadow-md animate-spin animate-duration-2s hover:animate-running not-hover:animate-pause max-h-40 max-w-40 min-h-40 min-w-40"
-					/>
-				</a>
+  <div
+    class="max-w-4xl w-full grid grid-cols-5 gap-4 py-8 max-[60rem]:grid-cols-1"
+  >
+    <div
+      class="flex flex-col max-[32rem]:flex-row lg:flex-col items-center gap-6 sm:gap-8 lg:gap-8 justify-center md:justify-start"
+      transition:persist
+    >
+      <a href="/">
+        <Image
+          src={ProfilePicture}
+          fetchpriority="high"
+          width="160"
+          height="160"
+          alt="profile picture"
+          decoding="async"
+          class="rounded-full drop-shadow-md animate-spin animate-duration-2s hover:animate-running not-hover:animate-pause max-h-40 max-w-40 min-h-40 min-w-40"
+        />
+      </a>
 
-				<div class="flex flex-row sm:flex-row lg:flex-col flex-wrap justify-center items-start gap-2 sm:gap-3 lg:gap-0 w-auto lg:w-full lg:max-w-40">
-					<Socials />
-					<Clock client:only />
-					<Online client:only />
-					<Webring />
-				</div>
-			</div>
+      <div
+        class="flex flex-row sm:flex-row lg:flex-col flex-wrap justify-center items-start gap-2 sm:gap-3 lg:gap-0 w-auto lg:w-full lg:max-w-40"
+      >
+        <Socials />
+        <Clock client:only />
+        <Online client:only />
+        <Webring />
+      </div>
+    </div>
 
-			<div class="sm:col-span-4 flex flex-col relative">
-				<TrafficConeAlt aria-hidden class="absolute size-12 bottom-full left-16 text-peach" />
-				<TrafficConeAlt aria-hidden class="absolute size-14 bottom-full left-27 text-peach" />
+    <div class="sm:col-span-4 flex flex-col relative">
+      <FlakeIcon
+        aria-hidden
+        class="absolute size-12 bottom-full left-16 text-peach"
+      />
+      <FlakeIcon
+        aria-hidden
+        class="absolute size-14 bottom-full left-27 text-peach"
+      />
 
-				<Header client:only />
-				<!-- need <main /> for transitions -->
-				<main>
-					<slot />
-				</main>
-				<Footer />
-			</div>
-		</div>
-	</body>
+      <Header client:only />
+      <!-- need <main /> for transitions -->
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </div>
 </html>

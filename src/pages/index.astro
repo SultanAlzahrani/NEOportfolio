@@ -7,58 +7,84 @@ import Tools from "../components/Tools.astro";
 
 import PersonIcon from "../assets/icons/person.svg";
 import LocationIcon from "../assets/icons/location.svg";
+
+import "../main.css";
 ---
 
 <Layout>
-	<section class="transition-[translate,opacity] duration-300 delay-100 starting:opacity-0 starting:translate-y-4 text-[0.938rem]">
-		<legend>about</legend>
-		<p>
-			Hey! I'm <strong class="text-peach">trafficlunar</strong>. I'm a <Age client:only /> year old self-taught programmer.
-		</p>
-		<p class="mt-2">I like coding things, maintaining and setting up servers, playing video games, watching anime, and listening to music.</p>
-		<p class="mt-2">If you're looking to contact me, here are the best ways from fastest to slowest response:</p>
-		<ol class="list-decimal pl-8 text-sm mt-2">
-			<li>Discord <span class="text-surface2">(fastest, within a day or two)</span></li>
-			<li>Twitter <span class="text-surface2">(fastest)</span></li>
-			<li>Reddit <span class="text-surface2">(fast)</span></li>
-			<li>Email <span class="text-surface2">(really slow, within days or even a month, probably weeks tbh)</span></li>
-		</ol>
-		<p class="mt-4">
-			This site was made using Astro + Svelte and is hosted on both
-			<a href="https://pages.cloudflare.com/" class="link" data-tooltip="At trafficlunar.net!">Cloudflare Pages (?)</a> and <a
-				href="https://nekoweb.org/"
-				class="link"
-				data-tooltip="At trafficlunar.nekoweb.org!">Nekoweb (?)</a
-			>.
-		</p>
-		<p class="mt-2">
-			I use Arch BTW and Hyprland with the Catppuccin
-			<span class="text-red">F</span><span class="text-peach">r</span><span class="text-yellow">a</span><span class="text-green">p</span><span class="text-blue"
-				>p</span
-			><span class="text-mauve">é</span> color scheme for everything (including this website!) I self-host a bunch of services and I also own a 3D printer.
-		</p>
+  <section
+    class="transition-[translate,opacity] duration-300 delay-100 starting:opacity-0 starting:translate-y-4 text-[0.938rem]"
+  >
+    <legend>about</legend>
+    <p>
+      Hey! I'm <strong class="text-peach">Sultan</strong>. I'm a <Age
+        client:only
+      /> year old software developer with bacholars in computer science.
+    </p>
+    <p class="mt-2">
+      I Enjoy coding in various fields such as web development, game
+      development, and reverse engineering. I also have a passion for learning
+      new technologies and improving my skills.
+    </p>
+    <p class="mt-2">
+      If you're looking to contact me, here are the best ways from fastest to
+      slowest response:
+    </p>
+    <ol class="list-decimal pl-8 text-sm mt-2">
+      <li>
+        Email <span class="text-surface2">(fastest, within a day or two)</span>
+      </li>
+      <li>Twitter <span class="text-surface2">(fastest)</span></li>
 
-		<div class="flex gap-1 mt-4">
-			<div data-tooltip="Pronouns" class="text-sm rounded bg-peach/25 text-peach w-fit pl-1 pr-2 py-1 flex gap-1 items-center">
-				<PersonIcon />
-				he/him
-			</div>
-			<div data-tooltip="Location" class="text-sm rounded bg-peach/25 text-peach w-fit pl-1 pr-2 py-1 flex gap-1 items-center">
-				<LocationIcon />
-				Scotland
-			</div>
-		</div>
-	</section>
+      <li>
+        Other <span class="text-surface2">(on the slower end)</span>
+      </li>
+    </ol>
+    <p class="mt-4">
+      This site was made using Astro + Svelte and is hosted on
+      <a
+        href="https://www.netcup.com/en"
+        class="link"
+        data-tooltip="At trafficlunar.net!">Netcup</a
+      > VPS.
+    </p>
+    <p class="mt-2">
+      I use Windows as my daily driver and I'm experimenting with Linux servers
+      on the side. I plan to make a full switch soon. Using
+      <span class="text-red">F</span><span class="text-peach">r</span><span
+        class="text-yellow">a</span
+      ><span class="text-green">p</span><span class="text-blue">p</span><span
+        class="text-mauve">é</span
+      > color scheme for this site.
+    </p>
 
-	<Tools />
+    <div class="flex gap-1 mt-4">
+      <div
+        data-tooltip="That's me!"
+        class="text-sm rounded bg-peach/25 text-peach w-fit pl-1 pr-2 py-1 flex gap-1 items-center"
+      >
+        <PersonIcon />
+        A silly fella
+      </div>
+      <div
+        data-tooltip="Location"
+        class="text-sm rounded bg-peach/25 text-peach w-fit pl-1 pr-2 py-1 flex gap-1 items-center"
+      >
+        <LocationIcon />
+        Saudi Arabia
+      </div>
+    </div>
+  </section>
 
-	<div
-		class="flex items-center gap-4 text-subtext0 text-sm font-medium my-4 transition-[translate,opacity] duration-300 delay-250 starting:opacity-0 starting:translate-y-4"
-	>
-		<hr class="grow border-surface1" />
-		<span>projects</span>
-		<hr class="grow border-surface1" />
-	</div>
+  <Tools />
 
-	<Projects client:load />
+  <div
+    class="flex items-center gap-4 text-subtext0 text-sm font-medium my-4 transition-[translate,opacity] duration-300 delay-250 starting:opacity-0 starting:translate-y-4"
+  >
+    <hr class="grow border-surface1" />
+    <span>projects</span>
+    <hr class="grow border-surface1" />
+  </div>
+
+  <Projects client:load />
 </Layout>
