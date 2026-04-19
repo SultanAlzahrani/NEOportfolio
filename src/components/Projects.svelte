@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import ProjectCard from "./ProjectCard.svelte";
 
   interface Project {
@@ -28,12 +27,15 @@
     Go: "bg-sapphire",
     Astro: "bg-[#ff5a03]",
     Svelte: "bg-[#ff3e00]",
+    React: "bg-blue",
   };
+
+  const getColor = (lang: string) => languageColors[lang] ?? "bg-overlay0";
 
   let activeProject: Project | null = null;
 
   function openModal(project: Project) {
-    activeProject = project;
+    if (project.expandable) activeProject = project;
   }
 
   function closeModal() {
@@ -43,7 +45,6 @@
   const withReadme = (url?: string) => {
     if (!url) return undefined;
 
-    // handle /tree/ repos
     if (url.includes("/tree/")) {
       return url.replace("/tree/", "/blob/") + "/README.md";
     }
@@ -58,11 +59,14 @@
       stargazers_count: 0,
       language: "C#-Unity Python",
       url: "https://github.com/SultanAlzahrani/SultanOnline-The-Game",
-      readmeUrl: withReadme("https://github.com/SultanAlzahrani/SKATEAWAY"),
+      readmeUrl: withReadme(
+        "https://github.com/SultanAlzahrani/SultanOnline-The-Game",
+      ),
       image: "./projects/SultanOnline.webp",
       expandable: true,
       expandedContent:
         "Multi-layered system with Unity client, backend, and tools for community interaction.",
+      color: getColor("C"),
     },
     {
       name: "SKATEAWAY",
@@ -75,14 +79,15 @@
       image: "./projects/skateaway.webp",
       expandable: true,
       expandedContent: "Still in development. Optimized for Chromium browsers.",
+      color: getColor("React"),
     },
-
     {
       name: "Silly Spotify",
       description: "Spotify analytics and playlist remixing app.",
       stargazers_count: 0,
       language: "React Node.js",
       image: "./projects/SillySpotify.webp",
+      color: getColor("React"),
     },
     {
       name: "The Weather App",
@@ -94,6 +99,7 @@
         "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TheWeatherApp/README.md",
       websiteUrl: "https://sultanalzahrani.github.io/TheWeatherApp/",
       image: "./projects/The-Weather-App-Logo.webp",
+      color: getColor("React"),
     },
     {
       name: "DoWhat?!",
@@ -105,6 +111,7 @@
         "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/DoWhat/README.md",
       websiteUrl: "https://sultanalzahrani.github.io/DoWhat/",
       image: "./projects/ToDo.webp",
+      color: getColor("React"),
     },
   ];
 
@@ -114,10 +121,10 @@
       description: "Personal blog about my hobbies and media coverage.",
       stargazers_count: 0,
       language: "React Node.js PostgreSQL",
-      url: "",
       readmeUrl: "https://blog.sultanonline.app/post/94",
       websiteUrl: "https://blog.sultanonline.app/",
       image: "./projects/blog.webp",
+      color: getColor("React"),
     },
     {
       name: "GG: Memory Game",
@@ -130,6 +137,7 @@
       ),
       websiteUrl: "https://gg-memory-card-game.vercel.app/",
       image: "./projects/ggame.png",
+      color: getColor("React"),
     },
     {
       name: "My Portfolio Website",
@@ -141,6 +149,7 @@
       url: "https://github.com/SultanAlzahrani/NEOportfolio",
       readmeUrl: withReadme("https://github.com/SultanAlzahrani/NEOportfolio"),
       websiteUrl: "https://sultanonline.app",
+      color: getColor("Astro"),
     },
     {
       name: "Validation Form",
@@ -151,6 +160,7 @@
       readmeUrl:
         "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/SignUpForm/README.md",
       websiteUrl: "https://sultanalzahrani.github.io/SignUpForm/",
+      color: getColor("React"),
     },
     {
       name: "Bakery Front Page",
@@ -161,6 +171,7 @@
       readmeUrl:
         "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/BakeryFrontPage/README.md",
       websiteUrl: "https://sultanalzahrani.github.io/BakeryFrontPage/",
+      color: getColor("React"),
     },
     {
       name: "Tic-Tac-Toe",
@@ -171,37 +182,9 @@
       readmeUrl:
         "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TicTacToe/README.md",
       websiteUrl: "https://sultanalzahrani.github.io/TicTacToe/",
+      color: getColor("React"),
     },
   ];
-
-  onMount(async () => {
-    try {
-      const res = await fetch("https://api.trafficlunar.net/projects");
-      const data: Project[] = await res.json();
-
-      const mapProject = (column: Project[]) => {
-        column.forEach((p, i) => {
-          const api = data.find((d) => d.name === p.name);
-          if (!api) return;
-
-          column[i] = {
-            ...p,
-            stargazers_count: api.stargazers_count,
-            language: api.language ?? "Unknown",
-            color: languageColors[api.language ?? ""] ?? "bg-overlay0",
-          };
-        });
-      };
-
-      mapProject(leftColumn);
-      mapProject(rightColumn);
-
-      leftColumn = [...leftColumn];
-      rightColumn = [...rightColumn];
-    } catch {
-      console.warn("API failed");
-    }
-  });
 </script>
 
 {#snippet projectColumn(data: Project[])}
