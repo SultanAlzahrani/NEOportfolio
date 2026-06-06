@@ -30,7 +30,7 @@
   class="group relative hover:-translate-y-1 transition-transform duration-200"
 >
   <section
-    class="h-full flex flex-col transition-colors group-hover:border-peach/50"
+    class="h-full flex flex-col transition-colors group-hover:border-peach/50 min-h-[450px]"
   >
     {#if year}
       <span
@@ -61,7 +61,7 @@
         {name}
       </h1>
 
-      <p class="mb-4 text-sm text-subtext0">{description}</p>
+      <p class="mb-4 text-sm text-subtext0 line-clamp-4">{description}</p>
 
       <div class="text-sm flex items-center justify-between mt-auto">
         <div class="flex gap-6">
@@ -81,14 +81,16 @@
             target="_blank"
             class="text-xs text-peach hover:opacity-80 transition"
           >
-            README ↗
+            README↗
           </a>
         {/if}
       </div>
 
       <hr class="border-surface0 my-4" />
 
-      <div class={`grid gap-2 ${websiteUrl ? "grid-cols-2" : "grid-cols-1"}`}>
+      <div
+        class={`grid gap-2 ${websiteUrl && sourceUrl ? "grid-cols-2" : "grid-cols-1"}`}
+      >
         {#if sourceUrl}
           <a
             href={sourceUrl}

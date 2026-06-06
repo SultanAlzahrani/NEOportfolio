@@ -54,6 +54,19 @@
 
   let leftColumn: Project[] = [
     {
+      name: "Orbit Drive",
+      description: "Locally hosted Drive app with Ai Files analysis.",
+      stargazers_count: 0,
+      language: "React Python PostgreSQL Docer",
+      url: "https://github.com/SultanAlzahrani/OrbitDrive",
+      readmeUrl: withReadme("https://github.com/SultanAlzahrani/OrbitDrive"),
+      image: "./projects/OrbitDrive.webp",
+      expandable: true,
+      expandedContent:
+        "Multi-layered system with Unity client, backend, and tools for community interaction.",
+      color: getColor("C"),
+    },
+    {
       name: "SultanOnline The Game",
       description: "Interactive online environment for viewers.",
       stargazers_count: 0,
@@ -152,8 +165,21 @@
       color: getColor("Astro"),
     },
     {
+      name: "Tic-Tac-Toe",
+      description: "Classic game for 2 players.",
+      stargazers_count: 0,
+      image: "./projects/tictactoe.webp",
+      language: "React",
+      url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/TicTacToe",
+      readmeUrl:
+        "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TicTacToe/README.md",
+      websiteUrl: "https://sultanalzahrani.github.io/TicTacToe/",
+      color: getColor("React"),
+    },
+    {
       name: "Validation Form",
       description: "Functional signup/register form UI.",
+      image: "./projects/form.webp",
       stargazers_count: 0,
       language: "React",
       url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/SignUpForm",
@@ -165,6 +191,7 @@
     {
       name: "Bakery Front Page",
       description: "Simple clean UI with image slider.",
+      image: "./projects/bakery.webp",
       stargazers_count: 0,
       language: "React",
       url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/BakeryFrontPage",
@@ -173,21 +200,12 @@
       websiteUrl: "https://sultanalzahrani.github.io/BakeryFrontPage/",
       color: getColor("React"),
     },
-    {
-      name: "Tic-Tac-Toe",
-      description: "Classic game for 2 players.",
-      stargazers_count: 0,
-      language: "React",
-      url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/TicTacToe",
-      readmeUrl:
-        "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TicTacToe/README.md",
-      websiteUrl: "https://sultanalzahrani.github.io/TicTacToe/",
-      color: getColor("React"),
-    },
   ];
+
+  const projects: Project[] = [...leftColumn, ...rightColumn];
 </script>
 
-{#snippet projectColumn(data: Project[])}
+<!-- {#snippet projectColumn(data: Project[])}
   <div class="flex flex-col gap-4">
     {#each data as project}
       <ProjectCard
@@ -205,11 +223,26 @@
       />
     {/each}
   </div>
-{/snippet}
+{/snippet} -->
 
-<div class="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
-  {@render projectColumn(leftColumn)}
-  {@render projectColumn(rightColumn)}
+<div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+  {#each projects as project}
+    <div class="h-full">
+      <ProjectCard
+        name={project.name}
+        description={project.description}
+        sourceUrl={project.url}
+        websiteUrl={project.websiteUrl}
+        readmeUrl={project.readmeUrl}
+        stars={project.stargazers_count}
+        color={project.color}
+        language={project.language}
+        image={project.image}
+        year={project.year}
+        on:expand={() => openModal(project)}
+      />
+    </div>
+  {/each}
 </div>
 
 {#if activeProject}

@@ -43,7 +43,6 @@
     { src: "/88x31/homer.gif" },
     { src: "/88x31/linux.gif" },
     { src: "/88x31/love_blahaj.gif" },
-    { src: "/88x31/nyan.gif" },
     { src: "/88x31/righttorepair.gif" },
     { src: "/88x31/sourcemissing.gif" },
     { src: "/88x31/stardew-valley.gif" },
