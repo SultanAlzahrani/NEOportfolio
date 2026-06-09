@@ -90,7 +90,7 @@
       url: "https://github.com/SultanAlzahrani/SillySpotify",
       readmeUrl: withReadme("https://github.com/SultanAlzahrani/SillySpotify"),
       websiteUrl: "https://sillyspotify.sultanonline.app/",
-      image: "./projects/SillySpotify.webp",
+      image: "/projects/SS2.webp",
       color: getColor("React"),
     },
     {
