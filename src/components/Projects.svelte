@@ -57,7 +57,7 @@
       name: "Orbit Drive",
       description: "Locally hosted Drive app with Ai Files analysis.",
       stargazers_count: 0,
-      language: "React Python PostgreSQL Docer",
+      language: "React Python PostgreSQL Docker",
       url: "https://github.com/SultanAlzahrani/OrbitDrive",
       readmeUrl: withReadme("https://github.com/SultanAlzahrani/OrbitDrive"),
       image: "./projects/OrbitDrive.webp",
@@ -82,6 +82,18 @@
       color: getColor("C"),
     },
     {
+      name: "SillySpotify",
+      description:
+        "Your listening habits, visualised. See your top tracks, artists, and hidden genre obsessions.",
+      stargazers_count: 0,
+      language: "React SpotifyAPI",
+      url: "https://github.com/SultanAlzahrani/SillySpotify",
+      readmeUrl: withReadme("https://github.com/SultanAlzahrani/SillySpotify"),
+      websiteUrl: "https://sillyspotify.sultanonline.app/",
+      image: "./projects/SillySpotify.webp",
+      color: getColor("React"),
+    },
+    {
       name: "SKATEAWAY",
       description: "Frontend clothing shop inspired by Vans.",
       stargazers_count: 0,
@@ -94,14 +106,7 @@
       expandedContent: "Still in development. Optimized for Chromium browsers.",
       color: getColor("React"),
     },
-    {
-      name: "Silly Spotify",
-      description: "Spotify analytics and playlist remixing app.",
-      stargazers_count: 0,
-      language: "React Node.js",
-      image: "./projects/SillySpotify.webp",
-      color: getColor("React"),
-    },
+
     {
       name: "The Weather App",
       description: "Simple weather app using an API.",
