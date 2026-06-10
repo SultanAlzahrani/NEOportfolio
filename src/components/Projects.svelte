@@ -55,7 +55,8 @@
   let leftColumn: Project[] = [
     {
       name: "Orbit Drive",
-      description: "Locally hosted Drive app with Ai Files analysis.",
+      description:
+        "Private, self-hosted storage system that lets you organize, search, and manage your files locally with full control over your data.",
       stargazers_count: 0,
       language: "React Python PostgreSQL Docker",
       url: "https://github.com/SultanAlzahrani/OrbitDrive",
@@ -93,6 +94,21 @@
       image: "/projects/SS2.webp",
       color: getColor("React"),
     },
+
+    {
+      name: "SmartDocApp",
+      description:
+        "Web application for automated document classification, Gmail attachment scanning, Google Drive integration, and file management.",
+      stargazers_count: 0,
+      language: "React Python GoogleAPIs",
+      url: "https://github.com/SultanAlzahrani/SmartDocApp",
+      readmeUrl: withReadme("https://github.com/SultanAlzahrani/SmartDocApp"),
+
+      image: "/projects/SmartDocApp.webp",
+      expandable: true,
+      expandedContent: "Still in development. Optimized for Chromium browsers.",
+      color: getColor("React"),
+    },
     {
       name: "SKATEAWAY",
       description: "Frontend clothing shop inspired by Vans.",
@@ -104,6 +120,21 @@
       image: "./projects/skateaway.webp",
       expandable: true,
       expandedContent: "Still in development. Optimized for Chromium browsers.",
+      color: getColor("React"),
+    },
+    {
+      name: "UnityLearn Video Downloader",
+      description:
+        "Script to download UnityLearn videos for offline viewing solves the problem of UnityLearn's slow streaming and lack of download options.",
+      stargazers_count: 0,
+      language: "Python",
+      url: "https://github.com/SultanAlzahrani/unity-learn-downloader",
+      readmeUrl: withReadme(
+        "https://github.com/SultanAlzahrani/unity-learn-downloader",
+      ),
+      image: "/projects/UnityLearn.webp",
+      expandable: true,
+
       color: getColor("React"),
     },
 
