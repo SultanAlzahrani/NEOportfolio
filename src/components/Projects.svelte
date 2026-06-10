@@ -52,7 +52,7 @@
     return `${url.replace(/\/$/, "")}/blob/main/README.md`;
   };
 
-  let leftColumn: Project[] = [
+  let projects: Project[] = [
     {
       name: "Orbit Drive",
       description:
@@ -110,6 +110,17 @@
       color: getColor("React"),
     },
     {
+      name: "Personal Blog",
+      description:
+        "Full-stack project for my own personal blog about my hobbies and media coverage. ",
+      stargazers_count: 0,
+      language: "React Node.js PostgreSQL",
+      readmeUrl: "https://blog.sultanonline.app/post/94",
+      websiteUrl: "https://blog.sultanonline.app/",
+      image: "./projects/blog.webp",
+      color: getColor("React"),
+    },
+    {
       name: "SKATEAWAY",
       description: "Frontend clothing shop inspired by Vans.",
       stargazers_count: 0,
@@ -139,18 +150,6 @@
     },
 
     {
-      name: "The Weather App",
-      description: "Simple weather app using an API.",
-      stargazers_count: 0,
-      language: "React",
-      url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/TheWeatherApp",
-      readmeUrl:
-        "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TheWeatherApp/README.md",
-      websiteUrl: "https://sultanalzahrani.github.io/TheWeatherApp/",
-      image: "./projects/The-Weather-App-Logo.webp",
-      color: getColor("React"),
-    },
-    {
       name: "DoWhat?!",
       description: "To-do list productivity app.",
       stargazers_count: 0,
@@ -162,18 +161,31 @@
       image: "./projects/ToDo.webp",
       color: getColor("React"),
     },
-  ];
-
-  let rightColumn: Project[] = [
     {
-      name: "Personal Blog",
-      description: "Personal blog about my hobbies and media coverage.",
+      name: "The Weather App",
+      description:
+        "Simple weather app using an API. Note: use your own API key.",
       stargazers_count: 0,
-      language: "React Node.js PostgreSQL",
-      readmeUrl: "https://blog.sultanonline.app/post/94",
-      websiteUrl: "https://blog.sultanonline.app/",
-      image: "./projects/blog.webp",
+      language: "React",
+      url: "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/tree/main/TheWeatherApp",
+      readmeUrl:
+        "https://github.com/SultanAlzahrani/SultanAlzahrani.github.io/blob/main/TheWeatherApp/README.md",
+      websiteUrl: "https://sultanalzahrani.github.io/TheWeatherApp/",
+      image: "./projects/The-Weather-App-Logo.webp",
       color: getColor("React"),
+    },
+
+    {
+      name: "My Portfolio Website",
+      description:
+        "Personal portfolio showcasing projects & more! You're currently looking at it!",
+      stargazers_count: 0,
+      language: "Astro Svelte Tailwind",
+      image: "./projects/portfolio.webp",
+      url: "https://github.com/SultanAlzahrani/NEOportfolio",
+      readmeUrl: withReadme("https://github.com/SultanAlzahrani/NEOportfolio"),
+      websiteUrl: "https://sultanonline.app",
+      color: getColor("Astro"),
     },
     {
       name: "GG: Memory Game",
@@ -188,18 +200,7 @@
       image: "./projects/ggame.png",
       color: getColor("React"),
     },
-    {
-      name: "My Portfolio Website",
-      description:
-        "Personal portfolio showcasing projects & more! You're currently looking at it!",
-      stargazers_count: 0,
-      language: "Astro Svelte Tailwind",
-      image: "./projects/portfolio.webp",
-      url: "https://github.com/SultanAlzahrani/NEOportfolio",
-      readmeUrl: withReadme("https://github.com/SultanAlzahrani/NEOportfolio"),
-      websiteUrl: "https://sultanonline.app",
-      color: getColor("Astro"),
-    },
+
     {
       name: "Tic-Tac-Toe",
       description: "Classic game for 2 players.",
@@ -237,8 +238,6 @@
       color: getColor("React"),
     },
   ];
-
-  const projects: Project[] = [...leftColumn, ...rightColumn];
 </script>
 
 <!-- {#snippet projectColumn(data: Project[])}
