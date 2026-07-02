@@ -121,6 +121,17 @@
       color: getColor("React"),
     },
     {
+      name: "AI Chatbot & Assistant (Discord)",
+      description:
+        "An LLM Powered chatbot and assistant for Discord, capable of answering questions, and more.",
+      stargazers_count: 0,
+      language: "Node.js Discord.js GEMMA-LLM",
+      url: "https://github.com/SultanAlzahrani/DiscordBot",
+      readmeUrl: withReadme("https://github.com/SultanAlzahrani/DiscordBot"),
+      image: "./projects/chatbot.webp",
+      color: getColor("React"),
+    },
+    {
       name: "SKATEAWAY",
       description: "Frontend clothing shop inspired by Vans.",
       stargazers_count: 0,
