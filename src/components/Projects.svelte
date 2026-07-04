@@ -58,7 +58,7 @@
       description:
         "Private, self-hosted storage system that lets you organize, search, and manage your files locally with full control over your data.",
       stargazers_count: 0,
-      language: "React Python PostgreSQL Docker",
+      language: "React Python MinIO PostgreSQL Docker",
       url: "https://github.com/SultanAlzahrani/OrbitDrive",
       readmeUrl: withReadme("https://github.com/SultanAlzahrani/OrbitDrive"),
       image: "./projects/OrbitDrive.webp",
