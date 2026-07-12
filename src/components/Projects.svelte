@@ -65,13 +65,13 @@
       expandable: true,
       expandedContent:
         "Multi-layered system with Unity client, backend, and tools for community interaction.",
-      color: getColor("C"),
+      color: getColor("React"),
     },
     {
       name: "SultanOnline The Game",
       description: "Interactive online environment for viewers.",
       stargazers_count: 0,
-      language: "C#-Unity Python",
+      language: "C# Unity Python",
       url: "https://github.com/SultanAlzahrani/SultanOnline-The-Game",
       readmeUrl: withReadme(
         "https://github.com/SultanAlzahrani/SultanOnline-The-Game",
@@ -80,7 +80,7 @@
       expandable: true,
       expandedContent:
         "Multi-layered system with Unity client, backend, and tools for community interaction.",
-      color: getColor("C"),
+      color: getColor("C#"),
     },
     {
       name: "SillySpotify",
@@ -129,7 +129,20 @@
       url: "https://github.com/SultanAlzahrani/DiscordBot",
       readmeUrl: withReadme("https://github.com/SultanAlzahrani/DiscordBot"),
       image: "./projects/chatbot.webp",
-      color: getColor("React"),
+      color: getColor("JavaScript"),
+    },
+    {
+      name: "X Media Sentinel",
+      description:
+        "A lightweight Python watcher that monitors an X (Twitter) account and automatically downloads any new photos or videos as they're posted ",
+      stargazers_count: 0,
+      language: "Python",
+      url: "https://github.com/SultanAlzahrani/X-Media-Sentinel",
+      readmeUrl: withReadme(
+        "https://github.com/SultanAlzahrani/X-Media-Sentinel",
+      ),
+      image: "./projects/xMedia.webp",
+      color: getColor("Python"),
     },
     {
       name: "SKATEAWAY",
