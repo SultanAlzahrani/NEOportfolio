@@ -68,6 +68,21 @@
       color: getColor("React"),
     },
     {
+      name: "News Pendulum",
+      description:
+        "A news aggregation platform that scrapes and clusters articles by story using vector embeddings, then answers user questions with LLM-grounded, citation-backed responses via a two-tier RAG system.",
+      stargazers_count: 0,
+      language: "React Python PostgreSQL Docker",
+      // url: "https://github.com/SultanAlzahrani/newspendulum",
+      readmeUrl: "https://blog.sultanonline.app/post/117",
+      websiteUrl: "https://news.sultanonline.app/",
+      image: "./projects/newsPendulum.webp",
+      expandable: true,
+      expandedContent:
+        "Multi-layered system with Unity client, backend, and tools for community interaction.",
+      color: getColor("React"),
+    },
+    {
       name: "SultanOnline The Game",
       description: "Interactive online environment for viewers.",
       stargazers_count: 0,
