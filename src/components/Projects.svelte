@@ -85,7 +85,7 @@
     {
       name: "DailyBug",
       description:
-        "A news aggregation platform that scrapes and clusters articles by story using vector embeddings, then answers user questions with LLM-grounded, citation-backed responses via a two-tier RAG system.",
+        "Daily JS bugs for you to figure out and fix! Every day a new bug is served.",
       stargazers_count: 0,
       language: "Angular NestJS MongoDB Docker",
       // url: "",
