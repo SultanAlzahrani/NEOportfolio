@@ -83,6 +83,21 @@
       color: getColor("React"),
     },
     {
+      name: "DailyBug",
+      description:
+        "A news aggregation platform that scrapes and clusters articles by story using vector embeddings, then answers user questions with LLM-grounded, citation-backed responses via a two-tier RAG system.",
+      stargazers_count: 0,
+      language: "Angular NestJS MongoDB Docker",
+      // url: "",
+      readmeUrl: "https://blog.sultanonline.app/post/118",
+      websiteUrl: "https://bug.sultanonline.app/",
+      image: "./projects/DailyBug.webp",
+      expandable: true,
+      expandedContent:
+        "Multi-layered system with Unity client, backend, and tools for community interaction.",
+      color: getColor("React"),
+    },
+    {
       name: "SultanOnline The Game",
       description: "Interactive online environment for viewers.",
       stargazers_count: 0,
